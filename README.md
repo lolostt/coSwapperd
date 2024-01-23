@@ -5,7 +5,7 @@ This script will:
  - Create SWAP_FILENAME file in mounted STORAGE_NAME volume for enable new swap location. Its size will be SWAP_SIZE.
 
 ### Motivation
-This script was created to try to prevent the aging of the flash memory on a Raspberry Pi. Using virtual memory in an SD card's flash memory can lead to excesive wear and premature aging. Use swap memory from a mechanical disk drive may be usefull.
+This script was created to try to prevent the aging of the flash memory in a Raspberry Pi. Using virtual memory on an SD card's flash memory can lead to excesive wear and premature aging. Using swap memory from a mechanical disk drive may be useful.
 
 ## Getting Started
 ### Prerequisites
@@ -16,15 +16,17 @@ This script was created to try to prevent the aging of the flash memory on a Ras
 ### Installing
 1. Place script somewhere. 
 Give execution permission with ```chmod +x coSwapperd.sh```
-3. Run ```coSwapperd.sh -e``` to enable start at boot.
+2. Run ```coSwapperd.sh -e``` to enable start at boot.
 
 ## Usage
-Just execure like a regular script. **Options are required**.
+Just execute like a regular script. **Options are required**.
  ```coSwapperd.sh -s```
 
 ### Available options
 ```-i | --initcheck``` Initial check. Mount point reachable check.
+
 ```-e | --enable``` Enable at boot using crontab.
+
 ```-s | --start``` Disable default swap and create new one.
 
 ### Script behaviour
